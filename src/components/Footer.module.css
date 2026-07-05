@@ -1,0 +1,4 @@
+.footer { text-align: center; padding: 3rem 1.5rem 2.5rem; }
+.icon { width: 1.6rem; margin-inline: auto; color: var(--sage); }
+.slogan { font-family: var(--font-display); font-style: italic; font-size: 1.3rem; color: var(--forest); margin-top: 0.5rem; }
+.meta { font-size: 0.85rem; color: var(--muted-text); margin-top: 0.5rem; } /* solid color, 5:1 — opacity fails contrast */
