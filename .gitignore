@@ -13,6 +13,9 @@ dist-ssr
 *.local
 assets/raw
 
+# Local-only: source docs (Maria's docx, prisliste) + dev plan tree — kept off the public repo
+docs/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
