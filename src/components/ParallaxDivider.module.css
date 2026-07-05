@@ -32,5 +32,6 @@
   padding: 1.25rem clamp(1.5rem, 5vw, 2.5rem);
   margin-inline: 1rem;
   text-shadow: 0 2px 28px rgba(38, 51, 34, 0.45);
-  max-width: 28ch;
+  max-width: 34ch;
+  transform: translateY(-50px);
 }
