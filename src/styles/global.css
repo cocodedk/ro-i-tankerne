@@ -1,0 +1,79 @@
+@import '@fontsource/cormorant-garamond/500.css';
+@import '@fontsource/cormorant-garamond/600.css';
+@import '@fontsource/lato/400.css';
+@import '@fontsource/lato/700.css';
+
+:root {
+  --cream: #f6f1e7;
+  --cream-card: #efe8da;
+  --sage: #8b9a7d;
+  --sage-soft: #a9b59c;
+  --forest: #4a5d43;
+  --forest-light: #5a6e51; /* hover surface under white text, 5.4:1 */
+  --ink: #3f4a3a;
+  --copper: #b98a54;       /* decorative only — fails contrast as text */
+  --copper-text: #8a5a2b;  /* copper for text, 5.2:1 on cream */
+  --muted-text: #5f6a58;   /* muted meta text (footer, akut afgrænsning), ~5:1 */
+  --white-soft: #fdfbf6;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Lato', 'Segoe UI', sans-serif;
+  --max-width: 1080px;
+}
+
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 7.25rem; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--forest);
+  font-weight: 600;
+  line-height: 1.15;
+}
+h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
+img { max-width: 100%; display: block; }
+a { color: var(--forest); }
+
+:focus-visible { outline: 3px solid var(--copper-text); outline-offset: 2px; }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 20;
+  background: var(--forest);
+  color: var(--white-soft);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-link:focus-visible { top: 0; }
+
+.container { max-width: var(--max-width); margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 1.5rem); }
+section { padding-block: clamp(3rem, 8vw, 6rem); }
+
+@media (min-width: 640px) {
+  html { scroll-padding-top: 5.5rem; }
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--copper-text);
+}
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
