@@ -1,0 +1,15 @@
+.section { background: var(--forest); }
+.section h2, .section p { color: var(--white-soft); }
+.section :global(.kicker) { color: var(--cream); } /* sage-soft fails contrast on forest */
+.inner { text-align: center; max-width: 40rem; }
+.lead { margin-top: 1rem; font-size: 1.15rem; }
+.lines { margin-top: 2rem; display: grid; gap: 0.4rem; font-size: 1.15rem; }
+.link {
+  display: inline-block;
+  padding: 0.5rem 0.25rem; /* ≥44px touch target */
+  color: var(--white-soft);
+  text-decoration-color: var(--sage-soft);
+}
+.placeholder { color: var(--cream); font-style: italic; }
+.social { margin-top: 2rem; font-size: 0.95rem; }
+.social p { color: var(--cream); }
