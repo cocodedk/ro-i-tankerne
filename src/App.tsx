@@ -1,7 +1,14 @@
+import { Hero } from './components/Hero';
+import { ParallaxDivider } from './components/ParallaxDivider';
+import { Priser } from './components/Priser';
+import { dividers } from './content/site';
+
 export default function App() {
   return (
     <main>
-      <h1>Ro i Tankerne</h1>
+      <Hero />
+      <ParallaxDivider divider={dividers[0]} />
+      <Priser />
     </main>
   );
 }
