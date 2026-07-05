@@ -1,0 +1,40 @@
+/* mobile-first: icon+text wrap, price drops below, aligned with the text */
+.header { text-align: center; margin-bottom: 3rem; }
+.list { list-style: none; padding: 0; display: grid; gap: 1rem; max-width: 46rem; margin-inline: auto; }
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  background: var(--cream-card);
+  border-radius: 1.25rem;
+  padding: 1.25rem clamp(1.25rem, 4vw, 1.5rem);
+}
+.iconWrap {
+  flex: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--sage);
+  display: grid;
+  place-items: center;
+}
+.icon { width: 1.9rem; color: var(--white-soft); }
+.body { display: flex; flex-direction: column; min-width: 0; flex: 1 1 12rem; }
+.title { font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.95rem; }
+.desc { font-size: 0.95rem; }
+.note { font-size: 0.95rem; font-style: italic; color: var(--copper-text); }
+.price {
+  margin-left: 4.75rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--forest);
+  white-space: nowrap;
+}
+.outro { text-align: center; margin-top: 2.5rem; font-style: italic; }
+
+@media (min-width: 560px) {
+  .card { flex-wrap: nowrap; }
+  .price { margin-left: auto; }
+}
